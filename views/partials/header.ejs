@@ -1,0 +1,21 @@
+<link rel="stylesheet" href="css/header.css">
+
+<header>
+    <div class="logotip">EJS</div>
+    <div class="ostHeader">
+        <div class="nav-bar">
+            <a class="linkHome" href="/">Главная</a>
+            <a class="linkParticipants" href="/Participants">Участники</a>
+            <a class="linkRating" href="/Rating">Рейтинг</a>
+        </div>
+        <div class="profile-information">
+            <% if(user){ %>
+                <div class="fullName"><%= user.fullName %></div>
+                <img class="Avatar" src={user.avatar} alt="Avatar"/>
+            <%} else{ %>
+                <div class="fullName">Имя Фамилия</div>
+                <div class="Avatar"></div>
+            <% } %>
+        </div>
+    </div>
+</header>
