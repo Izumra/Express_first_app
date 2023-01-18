@@ -1,5 +1,6 @@
 <link rel="stylesheet" href="css/header.css">
 
+<%-include('./regLogPopup')%> 
 <header>
     <div class="logotip">EJS</div>
     <div class="ostHeader">
@@ -13,9 +14,12 @@
                 <div class="fullName"><%= user.fullName %></div>
                 <img class="Avatar" src={user.avatar} alt="Avatar"/>
             <%} else{ %>
-                <div class="fullName">Имя Фамилия</div>
+                <div class="fullName">Войти</div>
                 <div class="Avatar"></div>
             <% } %>
         </div>
     </div>
 </header>
+
+
+<script src="js/homePageLogic.js"></script>

@@ -1,6 +1,6 @@
 import express from "express"
 
-const port=2000
+const port=1000
 const app=express()
 app.set('view engine','ejs')
 app.use(express.static("public"))

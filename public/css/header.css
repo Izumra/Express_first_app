@@ -4,7 +4,7 @@ header{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-top: 10px;
+    padding-top: 10px;
 }
 .profile-information{
     display: flex;
@@ -12,6 +12,7 @@ header{
 }
 .profile-information .fullName{
     margin-right: 16px;
+    cursor: pointer;
 }
 .profile-information .Avatar{
     background-color: burlywood;

@@ -1,0 +1,46 @@
+.wrap-popup{
+    position: absolute;
+    width:100vw;
+    height:100vh;
+    background-color:rgba(31, 30, 30, 0.8);
+}
+.hide{
+    visibility: hidden;
+}
+.wrap-popup form{
+    position: absolute;
+    height: min-content;
+    width: min-content;
+    background-color: #939393;
+    border-radius: 14px;
+    padding: 8px 24px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    border:5px solid linear-gradient(0deg, #ff63c1, #26ff51);
+}
+.logPopup, .logPopupForm, .regPopup{
+    display: flex;
+    justify-content: center;
+    padding:20px;
+}
+.titleLogForm{
+    font-size: 24px;
+    margin-bottom: 6px;
+    font-weight: 700;
+}
+.changeForm, .changerForm{
+    font-size: 18px;
+    font-weight: 400;
+    cursor: pointer;
+    padding: 0px 6px;
+}
+.logPopupForm input{
+    margin-bottom: 10px;
+}
+.sendAnket{
+    padding: 0px 20px;
+}
