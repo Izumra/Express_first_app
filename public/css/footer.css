@@ -12,6 +12,7 @@ footer{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin-top: calc(100vh - 90px);  
 }
 .links{
     display: flex;
