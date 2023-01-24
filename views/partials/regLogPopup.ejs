@@ -2,19 +2,19 @@
 
 <div class="wrap-popup hide">
     <div class="logPopup hide">
-        <form class="logPopupForm" action="post">
+        <form method="post" action="/" class="logPopupForm">
             <div class="titleLogForm">Войти</div>
-            <input type="email" placeholder="Почта"/>
-            <input type="password" placeholder="Пароль"/>
-            <input class="sendAnket" type="submit" value="Войти">
+            <input name="email" type="email" placeholder="Почта"/>
+            <input name="password" type="password" placeholder="Пароль"/>
+            <input class="sendAnket" type="submit" value="Войти" >
             <div class="changeForm">Зарегестрироваться</div>
         </form>
     </div>
     <div class="regPopup hide">
-        <form class="logPopupForm" action="post">
+        <form method="post" class="logPopupForm" action="/">
             <div class="titleLogForm">Зарегестрироваться</div>
-            <input type="email" placeholder="Почта"/>
-            <input type="password" placeholder="Пароль"/>
+            <input name="email" type="email" placeholder="Почта"/>
+            <input name="password" type="password" placeholder="Пароль"/>
             <input class="sendAnket" type="submit" value="Зарегестрироваться">
             <div class="changerForm">Войти</div>
         </form>
