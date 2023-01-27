@@ -4,7 +4,7 @@ import ratingPage from './rating.js'
 
 const routerApp=(app)=>{
     app.use('/',homePage)
-    app.use('/profile',profilePage)
+    app.use('/participants',profilePage)
     app.use('/ratingm',ratingPage)
 }
 export default routerApp
