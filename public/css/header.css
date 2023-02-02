@@ -13,6 +13,8 @@ header{
 .profile-information .fullName{
     margin-right: 16px;
     cursor: pointer;
+    text-decoration: none;
+    color: black;
 }
 .profile-information .Avatar{
     background-color: burlywood;

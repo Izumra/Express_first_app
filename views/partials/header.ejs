@@ -11,7 +11,7 @@
         </div>
         <div class="profile-information">
             <% if(user){ %>
-                <div class="fullName"><%= user.fullName %></div>
+                <a href="/logout" class="fullName">Выйти</a>
                 <img class="Avatar" src={user.avatar} alt="Avatar"/>
             <%} else{ %>
                 <div class="fullName">Войти</div>

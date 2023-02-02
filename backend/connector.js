@@ -3,6 +3,7 @@ import pg from 'pg'
 const Client=pg.Client
 const Pool=pg.Pool 
 
+
 const clientConnection=async(req,params)=>{
     try{
         const client=new Client({
@@ -38,7 +39,6 @@ const signQuerry=async(email,password)=>{
         if(profile.rowCount>0 && profile.rows[0].pass==password){
             return profile.rows[0]
         }
-        else console.log("Неверные данные для входа")
         await transactionClient.query("COMMIT")
     }catch(error){
         await transactionClient.query("ROLLBACK")

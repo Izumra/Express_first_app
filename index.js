@@ -2,7 +2,7 @@ import express from "express"
 import dotenv from "dotenv"
 import router from "./routes/GRouter.js"
 
-const port=2000
+const port=1000
 const app=express()
 dotenv.config()
 
