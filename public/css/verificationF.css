@@ -1,0 +1,38 @@
+.wrap-form-verification{
+    margin: 50px auto 0 auto;
+    max-width: 720px;
+    height: 320px;
+    box-shadow: 30px black;
+    background-color:rgb(199, 237, 199);
+    border: 3px solid grey;
+    border-radius: 16px;
+    padding: 20px;
+}
+.kod{
+    border:none;
+    border-radius: 14px;
+    height:40px;
+    background-color: rgb(255, 240, 221);
+    margin-top: 10px;
+    padding-left: 15px;
+}
+.kod::placeholder{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: rgb(71, 71, 71);
+}
+.message{
+    font-size: 24px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+form{
+    display: flex;
+    flex-wrap: wrap;
+    width: min-content;
+}
+.submitBtn{
+    border-radius: 14px;
+    height:30px;
+    background-color: rgb(255, 240, 221);
+    margin-top: 10px;
+    border: 1px solid rgb(101, 93, 83);
+}

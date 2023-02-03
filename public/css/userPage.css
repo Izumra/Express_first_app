@@ -1,0 +1,26 @@
+.wrap-profile{
+    max-width: 1110px;
+    padding:10px;
+    border:1px solid black;
+    margin: 20px auto 0 auto;
+    border-radius: 8px;
+    display: flex;
+}
+.avatar{
+    width: 200px;
+    height: 200px;
+    border-radius: 100%;
+    background-color:darkgray;
+}
+.about-me{
+    max-width: 1010px;
+    padding:10px;
+    border:1px solid black;
+    border-radius: 8px;
+    height: min-content;
+}
+.information-wrap{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 240px;
+}

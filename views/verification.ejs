@@ -1,0 +1,10 @@
+<link rel="stylesheet" href="css/verificationF.css"/>
+<%-include('./partials/head')%>
+<div class="wrap-form-verification">
+    <div class="message">Введите код верификации, отправленный вам на почту.</div>
+    <form method="post" action="/verification">
+        <input class="kod" name="kod" type="text" placeholder="Код подтверждения">
+        <input class="submitBtn" type="submit" value="Отправить">
+    </form>
+</div>
+<%-include('./partials/endDoc')%>

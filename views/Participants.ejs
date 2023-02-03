@@ -1,9 +1,32 @@
 <link rel="stylesheet" href="css/app.css">
+<link rel="stylesheet" href="css/userPage.css">
 
 <%-include('./partials/head')%>
 <%-include('./partials/header')%>
 
-Страница участников.
+<div class="wrap-profile">
+    <% if(user){ %>
+        <% if(user.avatar){ %>
+            <img class="avatar" src={<%= user.avatar %>} alt="Error">
+        <% }else{ %>
+            <div class="avatar"></div>
+        <% } %>
+        <div class="information-wrap">
+            <div class="full-name"><%= user.full_name %></div>
+            <% if(user.role_of_group){ %>
+                <div class="role-of-group"><%= user.role_of_group %></div>
+            <% }else{ %>
+                <div class="role-of-group">Вы не выбрали вашу специализацию</div>
+            <% } %>
+            <% if(user.about_me){ %>
+                <div class="about-me"><%= user.about_me %></div>
+            <% }else{ %>
+                <div class="about-me">Краткое резюме отсутствует</div>
+            <% } %>
+        </div>
+    <% }else{ %>
+    <% } %>
+</div>
 
 <%-include('./partials/footer')%>
 <%-include('./partials/endDoc')%>
