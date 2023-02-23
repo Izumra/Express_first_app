@@ -3,8 +3,12 @@ import { clientConnection, signQuerry } from '../backend/connector.js'
 import { sendMail } from '../public/js/sendlerMail.js'
 import cookieParser from 'cookie-parser'
 import { userConnecting } from '../backend/profile.js'
+import { S3Client } from '@aws-sdk/client-s3'
 
 const router = express.Router()
+
+const region="ru-central1"
+const client=new S3Client({region})
 
 router.use(cookieParser())
 
