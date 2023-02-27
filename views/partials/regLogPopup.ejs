@@ -2,7 +2,7 @@
 
 <div class="wrap-popup hide">
     <div class="logPopup hide">
-        <form method="post" action="/" class="logPopupForm">
+        <form method="post" action="/" class="logPopupForm" enctype="multipart/form-data">
             <div class="titleLogForm">Войти</div>
             <input name="email" type="email" placeholder="Почта"/>
             <input name="password" type="password" placeholder="Пароль"/>
@@ -11,12 +11,13 @@
         </form>
     </div>
     <div class="regPopup hide">
-        <form method="post" class="logPopupForm" action="/">
+        <form method="post" class="logPopupForm" action="/" enctype="multipart/form-data">
             <div class="titleLogForm">Зарегестрироваться</div>
             <input name="email" type="email" placeholder="Почта"/>
             <input name="password" type="password" placeholder="Пароль"/>
             <input name="firstName" placeholder="Имя"/>
             <input name="secondName" placeholder="Фамилия"/>
+            <input type="file" accept="image/jpeg,image/png" name="avatar" />
             <input class="sendAnket" type="submit" value="Зарегестрироваться">
             <div class="changerForm">Войти</div>
         </form>

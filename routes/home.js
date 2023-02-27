@@ -3,12 +3,11 @@ import { clientConnection, signQuerry } from '../backend/connector.js'
 import { sendMail } from '../public/js/sendlerMail.js'
 import cookieParser from 'cookie-parser'
 import { userConnecting } from '../backend/profile.js'
-import { S3Client } from '@aws-sdk/client-s3'
+import multer from 'multer'
+import { getPhoto,uploadPhoto } from '../backend/YandexCon.js'
 
+const store=multer({dest:'images'})
 const router = express.Router()
-
-const region="ru-central1"
-const client=new S3Client({region})
 
 router.use(cookieParser())
 
@@ -25,10 +24,10 @@ router.get('/logout', (req, res) => {
     res.redirect('/')
 })
 
-router.post('/', async (req, res) => {
+router.post('/',store.single('avatar'), async (req, res) => {
     if (req.body) {
         let data = await signQuerry(req.body.email, req.body.password)
-        if (data&&!req.body?.firstName&&!req.body?.firstName) {
+        if (data) {
             let date = new Date()
             date.setHours(date.getHours() + 5)
             res.cookie('email', data.email, {
@@ -36,14 +35,14 @@ router.post('/', async (req, res) => {
                 httpOnly: true,
                 expires: date
             })
-            //НЕ РАБОТАЕТ БЕЗ ИНТЕРНЕТА
+            //! НЕ РАБОТАЕТ БЕЗ ИНТЕРНЕТА
             //sendMail(req.body.email, 'Вы успешно зарегестрированы', 0)
             res.redirect('participants')
         }
-        else if(data&&(req.body.firstName||req.body.secondName)){
-            res.redirect('/')
-        }
-        else if(!data&&req.body.firstName&&req.body.secondName){
+        else if(!data&&req.body?.firstName&&req.body?.secondName){
+            console.log(req.file)
+            const photo=await uploadPhoto(req.file)
+            console.log(photo);
             let date = new Date()
             date.setHours(date.getHours() + 5)
             res.cookie('email', req.body.email, {
@@ -65,7 +64,7 @@ router.post('/', async (req, res) => {
 router.get('/verification', (req,res)=>{
     res.render('verification',{title:'Verification'})
     const sendlerNum = 10000 + Math.random() * (90000 + 1 - 10000)
-    //Не работает без интернета.
+    //! Не работает без интернета.
     //sendMail(res.cookie.email, '', Math.floor(sendlerNum))
 })
 

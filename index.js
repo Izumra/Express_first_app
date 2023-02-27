@@ -18,4 +18,4 @@ app.listen(port)
 
 
 //tests
-console.log("Server is starting")
+console.log("Server is starting on address: http://localhost:1000/")
